@@ -1,172 +1,50 @@
 <template>
-  <footer class="footer">
-    <div class="container footer__inner">
-      <!-- Колонка 1: Категории -->
-      <div class="footer__col">
-        <a href="#" class="footer__link">Малярные товары</a>
-        <a href="#" class="footer__link">Электрооборудование</a>
-        <a href="#" class="footer__link">Спецодежда</a>
-        <a href="#" class="footer__link">Для дома и дачи</a>
-        <a href="#" class="footer__link">Сезонное</a>
-        <a href="#" class="footer__link">Инструмент</a>
-      </div>
-
-      <!-- Колонка 2: Компания -->
-      <div class="footer__col">
-        <a href="#" class="footer__link">О компании</a>
-        <a href="#" class="footer__link">Контакты</a>
-        <a href="#" class="footer__link">Новинки</a>
-        <a href="#" class="footer__link">Хиты сезона</a>
-        <a href="#" class="footer__link">Распродажи</a>
-      </div>
-
-      <!-- Колонка 3: Логотип и контакты -->
-      <div class="footer__col footer__col--brand">
-        <div class="footer__logo">
-          <img src="/src/assets/img/header/logo.png" alt="Логотип" />
+  <footer>
+    <div class="container footer-inner">
+      <ul class="footer-col">
+        <li><router-link to="/catalog/paint">Малярные товары</router-link></li>
+        <li><router-link to="/catalog/electric">Электрооборудование</router-link></li>
+        <li><router-link to="/catalog/clothes">Спецодежда</router-link></li>
+        <li><router-link to="/catalog/home">Для дома и дачи</router-link></li>
+        <li><router-link to="/catalog/season">Сезонное</router-link></li>
+        <li><router-link to="/catalog/tools">Инструмент</router-link></li>
+      </ul>
+      <ul class="footer-col">
+        <li><router-link to="/about">О компании</router-link></li>
+        <li><router-link to="/contacts">Контакты</router-link></li>
+        <li><router-link to="/news">Новости</router-link></li>
+        <li><router-link to="/hits">Хиты сезона</router-link></li>
+        <li><router-link to="/sales">Распродажи</router-link></li>
+      </ul>
+      <div class="footer-brand">
+        <div class="logo">
+          <span>inst</span><span class="logo-orange">room</span>
         </div>
-
-        <div class="footer__phones">
-          <a href="tel:+74951203214" class="footer__phone">+7 495 120-32-14</a>
-          <a href="tel:+74951203215" class="footer__phone">+7 495 120-32-15</a>
-        </div>
-
-        <div class="footer__socials">
-          <a href="#" class="footer__social-link">
-            <img src="/src/assets/img/header/instagram.png" alt="Instagram" />
-          </a>
-          <a href="#" class="footer__social-link">
-            <img src="/src/assets/img/header/vkontakte.png" alt="VK" />
-          </a>
-          <a href="#" class="footer__social-link">
-            <img src="/src/assets/img/header/facebook.png" alt="Facebook" />
-          </a>
-        </div>
-
-        <div class="footer__copy">
-          <p>Соглашение пользователя</p>
-          <p>«Copyright © Название 2023»</p>
+        <a href="tel:+74955203214">+7 495 320-32-14</a>
+        <a href="tel:+74665203455">+7 466 320-34-55</a>
+        <div class="footer-socials">
+          <a href="#">VK</a><a href="#">OK</a><a href="#">FB</a>
         </div>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">© Copyright & ООО «Instroom» {{ new Date().getFullYear() }}</div>
     </div>
   </footer>
 </template>
 
-<script>
-export default {
-  name: 'FooterComponent'
-}
-</script>
-
 <style scoped>
-/* ===== ФУТЕР ===== */
-.footer {
-  background-color: #212526;
-  padding: 40px 0;
-  margin-top: auto;
-}
-
-.footer__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-}
-
-.footer__col {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* ===== ССЫЛКИ ===== */
-.footer__link {
-  font-size: 14px;
-  color: #DEDBDB;
-  transition: color 0.2s;
-}
-
-.footer__link:hover {
-  color: #FFFFFF;
-}
-
-/* ===== ТРЕТЬЯ КОЛОНКА ===== */
-.footer__col--brand {
-  gap: 16px;
-}
-
-
-.footer__phones {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.footer__phone {
-  font-size: 14px;
-  color: #DEDBDB;
-  transition: color 0.2s;
-}
-
-.footer__phone:hover {
-  color: #FFFFFF;
-}
-
-/* ===== СОЦСЕТИ ===== */
-.footer__socials {
-  display: flex;
-  gap: 10px;
-}
-
-.footer__social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid #3B3B3B;
-  transition: all 0.2s;
-}
-
-.footer__social-link:hover {
-  border-color: #F05A00;
-}
-
-.footer__social-link img {
-  width: 16px;
-  height: 16px;
-  display: block;
-}
-
-/* ===== КОПИРАЙТ ===== */
-.footer__copy {
-  font-size: 12px;
-  color: #8A8A8A;
-  line-height: 1.6;
-}
-
-.footer__copy p {
-  margin: 0;
-}
-
-/* ===== АДАПТИВ ===== */
-@media (max-width: 768px) {
-  .footer__inner {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer__col--brand {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .footer {
-    padding: 30px 0;
-  }
-}
+footer { background: #212526; color: #fff; padding: 40px 0 0; }
+.footer-inner { display: flex; gap: 60px; }
+.footer-col { display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { font-size: 13px; color: #8A8A8A; }
+.footer-col a:hover { color: #fff; }
+.footer-brand { margin-left: auto; display: flex; flex-direction: column; gap: 6px; }
+.logo { font-family: 'ProstoOne', sans-serif; font-size: 26px; line-height: 1; display: flex; flex-direction: column; margin-bottom: 6px; }
+.logo-orange { color: #F05A00; }
+.footer-brand a { font-size: 13px; color: #fff; }
+.footer-socials { display: flex; gap: 8px; margin-top: 4px; }
+.footer-socials a { font-size: 12px; color: #8A8A8A; border: 1px solid #3B3B3B; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; }
+.footer-socials a:hover { color: #fff; border-color: #fff; }
+.footer-bottom { border-top: 1px solid #3B3B3B; margin-top: 32px; padding: 14px 0; font-size: 12px; color: #8A8A8A; }
 </style>

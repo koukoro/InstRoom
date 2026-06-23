@@ -1,552 +1,93 @@
 <template>
-  <header class="header">
-    <!-- Верхняя полоска -->
-    <div class="header-top">
-      <div class="container header-top__inner">
-        <div class="header-logo">
-          <img src="/src/assets/img/header/logo.png" alt="Логотип" />
-        </div>
-
-        <div class="header-top__left">
-          <span>Время работы: 10:00–20:00</span>
-        </div>
-
-        <div class="header-top__center">
-          <a href="tel:+74951203214">+7 495 120-32-14</a>
-          <button>Заказать звонок</button>
-        </div>
-
-        <div class="header-top__right">
-          <button class="icon-btn">
-            <img src="/src/assets/img/header/like.png" alt="Избранное" />
-          </button>
-          <button class="icon-btn">
-            <img src="/src/assets/img/header/profile.png" alt="Профиль" />
-          </button>
-          <button class="icon-btn">
-            <img src="/src/assets/img/header/statistic.png" alt="Статистика" />
-          </button>
-          <div class="cart-info">
-            <button class="cart-btn">
-              <img src="/src/assets/img/header/cart.png" alt="Корзина" />
-            </button>
-            <div class="cart-sum">
-              <span>Товаров на сумму</span>
-              <strong>2 000 ₽</strong>
-            </div>
+  <header>
+    <!-- Топ бар -->
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <router-link to="/" class="logo">
+          <span>inst</span><span class="logo-orange">room</span>
+        </router-link>
+        <div class="topbar-info">
+          <span class="topbar-time">Время работы: 10:00–20:00</span>
+          <div>
+            <a href="tel:+74955203214" class="topbar-phone">+7 495 320-32-14</a>
+            <a href="#" class="topbar-callback">Заказать звонок</a>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Нижняя полоска с навигацией -->
-    <div class="header-bottom">
-      <div class="container header-bottom__inner">
-        <button class="catalog-btn">
-          <img src="/src/assets/img/header/list.png" alt="Каталог" />
-          Каталог товаров
-        </button>
-
-        <nav class="nav-menu">
-          <a href="#">О компании</a>
-          <a href="#">Акции</a>
-          <a href="#">Хиты сезона</a>
-          <a href="#">Новинки</a>
-        </nav>
-
-        <div class="socials">
-          <a href="#" class="social-link">
-            <img src="/src/assets/img/header/vkontakte.png" alt="VK" />
-          </a>
-          <a href="#" class="social-link">
-            <img src="/src/assets/img/header/instagram.png" alt="Instagram" />
-          </a>
-          <a href="#" class="social-link">
-            <img src="/src/assets/img/header/facebook.png" alt="Facebook" />
-          </a>
-        </div>
-
-        <div class="search">
-          <button class="search-btn">
-            <img src="/src/assets/img/header/search.png" alt="Поиск" />
+        <div class="topbar-icons">
+          <button class="icon-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
           </button>
-          <input type="text" placeholder="Поиск по каталогу" />
+          <button class="icon-btn notif">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="notif-dot">4</span>
+          </button>
+          <router-link to="/profile" class="icon-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </router-link>
+          <router-link to="/cart" class="icon-btn cart-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <div class="cart-label">
+              <span>Товаров на сумму</span>
+              <b>2 000 Р</b>
+            </div>
+          </router-link>
         </div>
-
-        <button class="burger" @click="mobileOpen = !mobileOpen">
-          <span :class="{ open: mobileOpen }"></span>
-        </button>
       </div>
     </div>
-
-    <!-- Мобильное меню -->
-    <div class="mobile-menu" v-show="mobileOpen">
-      <div class="container">
-        <nav class="mobile-nav">
-          <a href="#" @click="mobileOpen = false">Главная</a>
-          <a href="#" @click="mobileOpen = false">Каталог товаров</a>
-          <a href="#" @click="mobileOpen = false">О компании</a>
-          <a href="#" @click="mobileOpen = false">Акции</a>
-          <a href="#" @click="mobileOpen = false">Хиты сезона</a>
-          <a href="#" @click="mobileOpen = false">Новинки</a>
-        </nav>
-        <a href="tel:+74951203214" class="mobile-phone">+7 495 120-32-14</a>
+    <!-- Навигация -->
+    <nav class="nav">
+      <div class="container nav-inner">
+        <button class="catalog-btn">☰ Каталог товаров</button>
+        <ul class="nav-links">
+          <li><router-link to="/about">О компании</router-link></li>
+          <li><router-link to="/sales">Акции</router-link></li>
+          <li><router-link to="/hits">Хиты сезона</router-link></li>
+          <li><router-link to="/news">Новости</router-link></li>
+        </ul>
+        <div class="nav-socials">
+          <a href="#">IG</a><a href="#">VK</a><a href="#">FB</a>
+        </div>
+        <div class="nav-search">
+          <input type="text" placeholder="Поиск по каталогу" />
+          <button>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
 </template>
 
-<script>
-export default {
-  name: 'HeaderComponent',
-  data() {
-    return {
-      mobileOpen: false
-    }
-  }
-}
-</script>
-
 <style scoped>
-/* ===== ВЕРХНЯЯ ПОЛОСКА ===== */
-.header-top {
-  background-color: #212526;
-  padding: 8px 0;
-  border-bottom: 1px solid #3B3B3B;
-}
-
-.header-top__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-top__left span {
-  color: white;
-  font-size: 14px;
-}
-
-.header-top__center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
-.header-top__center a {
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.header-top__center a:hover {
-  color: #F05A00;
-}
-
-.header-top__center button {
-  color: #F05A00;
-  font-size: 14px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.header-top__center button:hover {
-  color: #FC573B;
-}
-
-.header-top__right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.icon-btn {
-  background: none;
-  border: none;
-  padding: 6px;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-.icon-btn:hover {
-  background-color: #F05A00;
-}
-
-.icon-btn img {
-  width: 24px;
-  height: 24px;
-  display: block;
-}
-
-.cart-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cart-btn {
-  background: none;
-  border: none;
-  padding: 6px;
-  cursor: pointer;
-}
-
-.cart-btn img {
-  width: 28px;
-  height: 28px;
-  display: block;
-}
-
-.cart-sum {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.cart-sum span {
-  color: white;
-  font-size: 12px;
-}
-
-.cart-sum strong {
-  color: #FFFFFF;
-  font-size: 16px;
-}
-
-/* ===== НИЖНЯЯ ПОЛОСКА ===== */
-.header-bottom {
-  background-color: #000000;
-  padding: 12px 0;
-}
-
-.header-bottom__inner {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  flex-shrink: 0;
-}
-
-.logo__inst {
-  font-family: 'Prosto One', sans-serif;
-  font-size: 18px;
-  color: #FFFFFF;
-}
-
-.logo__room {
-  font-family: 'Prosto One', sans-serif;
-  font-size: 18px;
-  color: #FFFFFF;
-}
-
-.catalog-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 16px;
-  border: 1px solid #F05A00;
-  background: none;
-  color: #FFFFFF;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.2s;
-}
-
-.catalog-btn:hover {
-  background-color: #F05A00;
-}
-
-.catalog-btn span {
-  width: 18px;
-  height: 2px;
-  background-color: #FFFFFF;
-  display: block;
-  margin: 2px 0;
-}
-
-.nav-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 24px;
-  flex: 1;
-}
-
-.nav-menu a {
-  color: #FFFFFF;
-  font-size: 14px;
-  font-weight: 500;
-  white-space: nowrap;
-  transition: color 0.2s;
-}
-
-.nav-menu a:hover {
-  color: #F05A00;
-}
-
-.socials {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px;
-  transition: opacity 0.2s;
-}
-
-.social-link:hover {
-  opacity: 0.7;
-}
-
-.social-link img {
-  width: 20px;
-  height: 20px;
-  display: block;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.search input {
-  background-color: white;
-  border: 1px solid #3B3B3B;
-  border-radius: 4px;
-  padding: 8px 40px 8px 16px;
-  color: #000000;
-  font-size: 14px;
-  width: 220px;
-}
-
-.search input::placeholder {
-  color: #8A8A8A;
-}
-
-.search input:focus {
-  border-color: #F05A00;
-  outline: none;
-}
-
-.search-btn {
-  position: absolute;
-  right: 8px;
-  background: none;
-  border: none;
-  padding: 4px;
-  cursor: pointer;
-}
-
-.search-btn img {
-  width: 20px;
-  height: 20px;
-  display: block;
-}
-
-.burger {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  padding: 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.burger span {
-  width: 24px;
-  height: 2px;
-  background-color: #FFFFFF;
-  display: block;
-  transition: all 0.3s;
-  position: relative;
-}
-
-.burger span::before,
-.burger span::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background-color: #FFFFFF;
-  transition: all 0.3s;
-}
-
-.burger span::before {
-  top: -6px;
-}
-
-.burger span::after {
-  top: 6px;
-}
-
-.burger span.open {
-  background-color: transparent;
-}
-
-.burger span.open::before {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.burger span.open::after {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-/* ===== МОБИЛЬНОЕ МЕНЮ ===== */
-.mobile-menu {
-  background-color: #212526;
-  border-top: 1px solid #3B3B3B;
-  padding: 20px 0;
-}
-
-.mobile-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.mobile-nav a {
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.mobile-nav a:hover {
-  color: #F05A00;
-}
-
-.mobile-phone {
-  color: #F05A00;
-  font-size: 18px;
-  font-family: 'Prosto One', sans-serif;
-}
-
-/* ===== АДАПТИВ ===== */
-@media (max-width: 1024px) {
-  .header-bottom__inner {
-    gap: 16px;
-  }
-
-  .nav-menu {
-    gap: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-top__left {
-    display: none;
-  }
-
-  .header-top__center {
-    flex-direction: row;
-    gap: 12px;
-  }
-
-  .header-top__center a {
-    font-size: 14px;
-  }
-
-  .header-top__center button {
-    font-size: 12px;
-  }
-
-  .cart-sum {
-    display: none;
-  }
-
-  .nav-menu {
-    display: none;
-  }
-
-  .socials {
-    display: none;
-  }
-
-  .search input {
-    width: 160px;
-    font-size: 12px;
-    padding: 6px 32px 6px 12px;
-  }
-
-  .search-btn img {
-    width: 16px;
-    height: 16px;
-  }
-
-  .catalog-btn {
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-  .catalog-btn span {
-    width: 14px;
-  }
-
-  .burger {
-    display: flex;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-top__center {
-    display: none;
-  }
-
-  .header-top__right {
-    gap: 8px;
-  }
-
-  .icon-btn img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .cart-btn img {
-    width: 22px;
-    height: 22px;
-  }
-
-  .logo__inst,
-  .logo__room {
-    font-size: 14px;
-  }
-
-  .search input {
-    width: 120px;
-    font-size: 11px;
-    padding: 5px 28px 5px 10px;
-  }
-
-  .search-btn img {
-    width: 14px;
-    height: 14px;
-  }
-
-  .catalog-btn {
-    font-size: 11px;
-    padding: 6px 10px;
-  }
-}
-
-.cart-btn:hover {
-
-}
+header { background: #212526; color: #fff; }
+
+.topbar { border-bottom: 1px solid #3B3B3B; }
+.topbar-inner { display: flex; align-items: center; gap: 20px; padding-top: 10px; padding-bottom: 10px; }
+.logo { font-family: 'ProstoOne', sans-serif; font-size: 22px; line-height: 1; display: flex; flex-direction: column; color: #fff; }
+.logo-orange { color: #F05A00; }
+.topbar-info { flex: 1; font-size: 12px; color: #8A8A8A; display: flex; flex-direction: column; gap: 4px; }
+.topbar-phone { color: #fff; font-size: 14px; margin-right: 12px; }
+.topbar-callback { color: #F05A00; font-size: 12px; }
+.topbar-icons { display: flex; align-items: center; gap: 16px; }
+.icon-btn { color: #fff; display: flex; align-items: center; position: relative; }
+.notif { position: relative; }
+.notif-dot { position: absolute; top: -4px; right: -6px; background: #F05A00; color: #fff; font-size: 9px; width: 14px; height: 14px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.cart-icon { display: flex; align-items: center; gap: 8px; }
+.cart-label { display: flex; flex-direction: column; font-size: 11px; line-height: 1.4; }
+.cart-label b { color: #F05A00; font-size: 13px; }
+
+.nav { }
+.nav-inner { display: flex; align-items: stretch; gap: 0; }
+.catalog-btn { background: #F05A00; color: #fff; font-family: 'ProstoOne', sans-serif; font-size: 13px; padding: 0 20px; white-space: nowrap; height: 48px; }
+.catalog-btn:hover { background: #FC573B; }
+.nav-links { display: flex; margin-left: 16px; }
+.nav-links a { display: flex; align-items: center; padding: 0 16px; height: 48px; font-size: 14px; color: #fff; }
+.nav-links a:hover { color: #F05A00; }
+.nav-socials { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.nav-socials a { color: #8A8A8A; font-size: 12px; font-weight: 500; }
+.nav-socials a:hover { color: #fff; }
+.nav-search { display: flex; border: 1px solid #3B3B3B; margin-left: 16px; }
+.nav-search input { background: transparent; border: none; outline: none; color: #fff; padding: 0 12px; font-size: 13px; width: 180px; }
+.nav-search input::placeholder { color: #8A8A8A; }
+.nav-search button { background: #F05A00; color: #fff; padding: 0 12px; display: flex; align-items: center; }
 </style>

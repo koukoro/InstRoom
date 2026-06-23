@@ -1,0 +1,14 @@
+[
+  { "id": 1,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": "Новинка", "inStock": true,  "img": "src/assets/img/products/emal.png", "category": "paint" },
+  { "id": 2,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": null,      "inStock": true,  "img": "/img/p2.png", "category": "paint" },
+  { "id": 3,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": "Новинка", "inStock": false, "img": "/img/p3.png", "category": "electric" },
+  { "id": 4,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": "Новинка", "inStock": true,  "img": "/img/p4.png", "category": "electric" },
+  { "id": 5,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": "Акция",   "inStock": true,  "img": "/img/p5.png", "category": "clothes" },
+  { "id": 6,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": null,      "inStock": true,  "img": "/img/p6.png", "category": "clothes" },
+  { "id": 7,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": "Новинка", "inStock": true,  "img": "/img/p7.png", "category": "home" },
+  { "id": 8,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": null,      "inStock": true,  "img": "/img/p8.png", "category": "home" },
+  { "id": 9,  "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": "Новинка", "inStock": true,  "img": "/img/p9.png", "category": "season" },
+  { "id": 10, "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": "Новинка", "inStock": true,  "img": "/img/p10.png","category": "season" },
+  { "id": 11, "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": "Новинка", "inStock": true,  "img": "/img/p11.png","category": "tools" },
+  { "id": 12, "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг", "price": 500, "badge": null,      "inStock": true,  "img": "/img/p12.png","category": "tools" }
+]
