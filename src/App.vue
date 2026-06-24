@@ -1,10 +1,22 @@
 <template>
-  <Header />
-  <router-view />
-  <Footer />
+  <div>
+    <AppHeader />
+    <main>
+      <router-view />
+    </main>
+    <AppFooter />
+  </div>
 </template>
 
-<script setup>
-import Header from '@/components/layouts/Header.vue'
-import Footer from '@/components/layouts/Footer.vue'
+<script>
+import AppHeader from './components/AppHeader.vue'
+import AppFooter from './components/AppFooter.vue'
+
+export default {
+  name: 'App',
+  components: {
+    AppHeader,
+    AppFooter
+  }
+}
 </script>
