@@ -1,182 +1,258 @@
 {
   "categories": [
+    { "id": 1, "slug": "malyarnye", "name": "Малярные товары", "image": "/images/cat-paint.jpg" },
+    { "id": 2, "slug": "elektrooborudovanie", "name": "Электрооборудование", "image": "/images/cat-electric.jpg" },
+    { "id": 3, "slug": "spetsodezhda", "name": "Спецодежда", "image": "/images/cat-clothes.jpg" },
+    { "id": 4, "slug": "sezonnoe", "name": "Сезонное", "image": "/images/cat-seasonal.jpg" },
+    { "id": 5, "slug": "dlya-doma", "name": "Для дома и дачи", "image": "/images/cat-home.jpg" },
+    { "id": 6, "slug": "instrument", "name": "Инструменты", "image": "/images/cat-tools.jpg" }
+  ],
+  "subcategories": {
+    "dlya-doma": [
+      { "id": 51, "name": "Поливочный инвентарь", "image": "/images/sub-watering.jpg" },
+      { "id": 52, "name": "Насосы", "image": "/images/sub-pumps.jpg" },
+      { "id": 53, "name": "Поликарбонат", "image": "/images/sub-polycarbonate.jpg" },
+      { "id": 54, "name": "Садово-огородный инвентарь", "image": "/images/sub-garden.jpg" },
+      { "id": 55, "name": "Грунт", "image": "/images/sub-soil.jpg" },
+      { "id": 56, "name": "Сетка Рабица", "image": "/images/sub-mesh.jpg" },
+      { "id": 57, "name": "Летний душ", "image": "/images/sub-shower.jpg" },
+      { "id": 58, "name": "Умывальники, рукомойники", "image": "/images/sub-sink.jpg" },
+      { "id": 59, "name": "Побелка", "image": "/images/sub-whitewash.jpg" },
+      { "id": 60, "name": "Краска садовая", "image": "/images/sub-paint.jpg" },
+      { "id": 61, "name": "Удобрения", "image": "/images/sub-fert.jpg" },
+      { "id": 62, "name": "Печное литьё и аксессуары", "image": "/images/sub-oven.jpg" }
+    ]
+  },
+  "products": [
     {
       "id": 1,
-      "name": "Малярные товары",
-      "products": [
-        {
-          "id": 1,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": 720,
-          "image": "/src/assets/images/products/emal.png",
-          "badge": "Новинка",
-          "inStock": true
-        },
-        {
-          "id": 2,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/objekt.png",
-          "badge": null,
-          "inStock": true
-        }
-      ]
+      "slug": "emal-condor-pf115-zheltaya",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": 720,
+      "inStock": true,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 1,
+      "image": "/images/product-condor-yellow.jpg",
+      "description": "Торговое или промышленное предприятие, торгово-промышленное объединение предпринимателей, форма организации предприятия, при которой его правосубъектность отличается от правосубъектности лиц, в нём участвующих.",
+      "brand": "Condor",
+      "weight": "1,8 кг",
+      "article": "ПФ-115"
     },
     {
       "id": 2,
-      "name": "Электрооборудование",
-      "products": [
-        {
-          "id": 3,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/bita.png",
-          "badge": "Новинка",
-          "inStock": true
-        },
-        {
-          "id": 4,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/screwdriver.png",
-          "badge": "Новинка",
-          "inStock": false
-        }
-      ]
+      "slug": "emal-condor-pf115-belaya",
+      "name": "Эмаль Condor ПФ-115 белая 1,8 кг",
+      "price": 500,
+      "oldPrice": 720,
+      "inStock": false,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 1,
+      "image": "/images/product-condor-white.jpg",
+      "description": "Торговое или промышленное предприятие, торгово-промышленное объединение предпринимателей.",
+      "brand": "Condor",
+      "weight": "1,8 кг",
+      "article": "ПФ-115"
     },
     {
       "id": 3,
-      "name": "Спецодежда",
-      "products": [
-        {
-          "id": 5,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/jacket.png",
-          "badge": "Акция",
-          "inStock": true
-        },
-        {
-          "id": 6,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/hat.png",
-          "badge": null,
-          "inStock": true
-        }
-      ]
+      "slug": "otvertka-elektrik",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": 720,
+      "inStock": true,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 2,
+      "image": "/images/product-screwdriver.jpg",
+      "description": "Описание товара.",
+      "brand": "Truper",
+      "weight": "0,3 кг",
+      "article": "EL-100"
     },
     {
       "id": 4,
-      "name": "Для дома и дачи",
-      "products": [
-        {
-          "id": 7,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/kusach.png",
-          "badge": "Новинка",
-          "inStock": true
-        },
-        {
-          "id": 8,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/shovel.png",
-          "badge": null,
-          "inStock": true
-        }
-      ]
+      "slug": "otvertka-krasnya",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": null,
+      "inStock": true,
+      "isNew": false,
+      "isSale": false,
+      "categoryId": 2,
+      "image": "/images/product-screwdriver2.jpg",
+      "description": "Описание товара.",
+      "brand": "Truper",
+      "weight": "0,3 кг",
+      "article": "EL-101"
     },
     {
       "id": 5,
-      "name": "Сезонное",
-      "products": [
-        {
-          "id": 9,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/pistol.png",
-          "badge": "Новинка",
-          "inStock": true
-        },
-        {
-          "id": 10,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/vils.png",
-          "badge": "Новинка",
-          "inStock": true
-        }
-      ]
+      "slug": "kurtka-rabochaya",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": null,
+      "inStock": true,
+      "isNew": false,
+      "isSale": true,
+      "categoryId": 3,
+      "image": "/images/product-jacket.jpg",
+      "description": "Описание товара.",
+      "brand": "Kapro",
+      "weight": "0,8 кг",
+      "article": "WJ-200"
     },
     {
       "id": 6,
-      "name": "Инструмент",
-      "products": [
-        {
-          "id": 11,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/bita.png",
-          "badge": "Новинка",
-          "inStock": true
-        },
-        {
-          "id": 12,
-          "name": "Эмаль Condor ПФ-115 жёлтая 1.8 кг",
-          "price": 500,
-          "oldPrice": null,
-          "image": "/src/assets/images/products/pistol.png",
-          "badge": null,
-          "inStock": true
-        }
-      ]
+      "slug": "kaska-oranzhevaya",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": 720,
+      "inStock": true,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 3,
+      "image": "/images/product-helmet.jpg",
+      "description": "Описание товара.",
+      "brand": "Kapro",
+      "weight": "0,4 кг",
+      "article": "HC-300"
+    },
+    {
+      "id": 7,
+      "slug": "sekatory",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": 720,
+      "inStock": true,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 4,
+      "image": "/images/product-pruner.jpg",
+      "description": "Описание товара.",
+      "brand": "Truper",
+      "weight": "0,5 кг",
+      "article": "SC-100"
+    },
+    {
+      "id": 8,
+      "slug": "vily-sadovye",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": null,
+      "inStock": true,
+      "isNew": false,
+      "isSale": false,
+      "categoryId": 4,
+      "image": "/images/product-fork.jpg",
+      "description": "Описание товара.",
+      "brand": "Truper",
+      "weight": "1,2 кг",
+      "article": "FK-200"
+    },
+    {
+      "id": 9,
+      "slug": "pistolet-pennyy",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": 720,
+      "inStock": true,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 6,
+      "image": "/images/product-gun.jpg",
+      "description": "Описание товара.",
+      "brand": "Finland",
+      "weight": "0,6 кг",
+      "article": "GN-100"
+    },
+    {
+      "id": 10,
+      "slug": "kley-montazhny",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": 720,
+      "inStock": true,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 6,
+      "image": "/images/product-adhesive.jpg",
+      "description": "Описание товара.",
+      "brand": "Finland",
+      "weight": "0,9 кг",
+      "article": "GL-100"
+    },
+    {
+      "id": 11,
+      "slug": "kley2",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": 720,
+      "inStock": true,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 6,
+      "image": "/images/product-adhesive.jpg",
+      "description": "Описание товара.",
+      "brand": "Finland",
+      "weight": "0,9 кг",
+      "article": "GL-101"
+    },
+    {
+      "id": 12,
+      "slug": "dlya-doma-1",
+      "name": "Эмаль Condor ПФ-115 жёлтая 1,8 кг",
+      "price": 500,
+      "oldPrice": null,
+      "inStock": true,
+      "isNew": true,
+      "isSale": false,
+      "categoryId": 5,
+      "image": "/images/product-home.jpg",
+      "description": "Описание товара.",
+      "brand": "Truper",
+      "weight": "1 кг",
+      "article": "HM-100"
     }
-  ],
-  "brands": [
-    { "id": 1, "name": "TRUPER" },
-    { "id": 2, "name": "ЦЕНТРО" },
-    { "id": 3, "name": "FINLAND" },
-    { "id": 4, "name": "KAPRO" },
-    { "id": 5, "name": "TRUPER" },
-    { "id": 6, "name": "ЦЕНТРО" }
   ],
   "news": [
     {
       "id": 1,
       "title": "Название новости",
       "date": "12 января 2023",
-      "image": null
+      "image": "/images/news1.jpg",
+      "text": "Торговое или промышленное предприятие, торгово-промышленное объединение предпринимателей, форма организации предприятия, при которой его правосубъектность отличается от правосубъектности лиц, в нём участвующих."
     },
     {
       "id": 2,
       "title": "Название новости",
       "date": "12 января 2023",
-      "image": null
+      "image": "/images/news2.jpg",
+      "text": "Торговое или промышленное предприятие."
     },
     {
       "id": 3,
       "title": "Название новости",
       "date": "12 января 2023",
-      "image": null
+      "image": "/images/news3.jpg",
+      "text": "Торговое или промышленное предприятие."
     },
     {
       "id": 4,
       "title": "Название новости",
       "date": "12 января 2023",
-      "image": null
+      "image": "./assets/images/garden.png",
+      "text": "Торговое или промышленное предприятие."
     }
+  ],
+  "brands": [
+    { "id": 1, "name": "Truper", "logo": "/images/brand-truper.png" },
+    { "id": 2, "name": "Центр инструмент", "logo": "/images/brand-centr.png" },
+    { "id": 3, "name": "Finland", "logo": "/images/brand-finland.png" },
+    { "id": 4, "name": "Kapro", "logo": "/images/brand-kapro.png" },
+    { "id": 5, "name": "Truper 2", "logo": "/images/brand-truper2.png" },
+    { "id": 6, "name": "Центр 2", "logo": "/images/brand-centr2.png" }
   ]
 }
