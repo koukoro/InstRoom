@@ -3,8 +3,8 @@
     { "id": 1, "slug": "malyarnye", "name": "Малярные товары", "image": "/images/cat-paint.jpg" },
     { "id": 2, "slug": "elektrooborudovanie", "name": "Электрооборудование", "image": "/images/cat-electric.jpg" },
     { "id": 3, "slug": "spetsodezhda", "name": "Спецодежда", "image": "/images/cat-clothes.jpg" },
-    { "id": 4, "slug": "sezonnoe", "name": "Сезонное", "image": "/images/cat-seasonal.jpg" },
-    { "id": 5, "slug": "dlya-doma", "name": "Для дома и дачи", "image": "/images/cat-home.jpg" },
+    { "id": 4, "slug": "sezonnoe", "name": "Для дома и дачи", "image": "/images/cat-seasonal.jpg" },
+    { "id": 5, "slug": "dlya-doma", "name": "Сезонное", "image": "/images/cat-home.jpg" },
     { "id": 6, "slug": "instrument", "name": "Инструменты", "image": "/images/cat-tools.jpg" }
   ],
   "subcategories": {
@@ -34,7 +34,7 @@
       "isNew": true,
       "isSale": false,
       "categoryId": 1,
-      "image": "/images/product-condor-yellow.jpg",
+      "image": "/src/assets/images/emal.png",
       "description": "Торговое или промышленное предприятие, торгово-промышленное объединение предпринимателей, форма организации предприятия, при которой его правосубъектность отличается от правосубъектности лиц, в нём участвующих.",
       "brand": "Condor",
       "weight": "1,8 кг",
@@ -50,7 +50,7 @@
       "isNew": true,
       "isSale": false,
       "categoryId": 1,
-      "image": "/images/product-condor-white.jpg",
+      "image": "/src/assets/images/objekt.png",
       "description": "Торговое или промышленное предприятие, торгово-промышленное объединение предпринимателей.",
       "brand": "Condor",
       "weight": "1,8 кг",
@@ -66,7 +66,7 @@
       "isNew": true,
       "isSale": false,
       "categoryId": 2,
-      "image": "/images/product-screwdriver.jpg",
+      "image": "/src/assets/images/screwdriver.png",
       "description": "Описание товара.",
       "brand": "Truper",
       "weight": "0,3 кг",
@@ -82,7 +82,7 @@
       "isNew": false,
       "isSale": false,
       "categoryId": 2,
-      "image": "/images/product-screwdriver2.jpg",
+      "image": "/src/assets/images/sverlo.png",
       "description": "Описание товара.",
       "brand": "Truper",
       "weight": "0,3 кг",
@@ -98,7 +98,7 @@
       "isNew": false,
       "isSale": true,
       "categoryId": 3,
-      "image": "/images/product-jacket.jpg",
+      "image": "/src/assets/images/jacket.png",
       "description": "Описание товара.",
       "brand": "Kapro",
       "weight": "0,8 кг",
@@ -114,7 +114,7 @@
       "isNew": true,
       "isSale": false,
       "categoryId": 3,
-      "image": "/images/product-helmet.jpg",
+      "image": "/src/assets/images/casca.png",
       "description": "Описание товара.",
       "brand": "Kapro",
       "weight": "0,4 кг",
@@ -130,7 +130,7 @@
       "isNew": true,
       "isSale": false,
       "categoryId": 4,
-      "image": "/images/product-pruner.jpg",
+      "image": "/src/assets/images/kusach.png",
       "description": "Описание товара.",
       "brand": "Truper",
       "weight": "0,5 кг",
@@ -146,7 +146,7 @@
       "isNew": false,
       "isSale": false,
       "categoryId": 4,
-      "image": "/images/product-fork.jpg",
+      "image": "/src/assets/images/vili.png",
       "description": "Описание товара.",
       "brand": "Truper",
       "weight": "1,2 кг",
@@ -161,8 +161,8 @@
       "inStock": true,
       "isNew": true,
       "isSale": false,
-      "categoryId": 6,
-      "image": "/images/product-gun.jpg",
+      "categoryId": 5,
+      "image": "/src/assets/images/damkrat.png",
       "description": "Описание товара.",
       "brand": "Finland",
       "weight": "0,6 кг",
@@ -177,8 +177,8 @@
       "inStock": true,
       "isNew": true,
       "isSale": false,
-      "categoryId": 6,
-      "image": "/images/product-adhesive.jpg",
+      "categoryId": 5,
+      "image": "/src/assets/images/shovel.png",
       "description": "Описание товара.",
       "brand": "Finland",
       "weight": "0,9 кг",
@@ -194,7 +194,7 @@
       "isNew": true,
       "isSale": false,
       "categoryId": 6,
-      "image": "/images/product-adhesive.jpg",
+      "image": "/src/assets/images/screwdriver.png",
       "description": "Описание товара.",
       "brand": "Finland",
       "weight": "0,9 кг",
@@ -209,8 +209,8 @@
       "inStock": true,
       "isNew": true,
       "isSale": false,
-      "categoryId": 5,
-      "image": "/images/product-home.jpg",
+      "categoryId": 6,
+      "image": "/src/assets/images/pistol.png",
       "description": "Описание товара.",
       "brand": "Truper",
       "weight": "1 кг",
@@ -243,16 +243,40 @@
       "id": 4,
       "title": "Название новости",
       "date": "12 января 2023",
-      "image": "./assets/images/garden.png",
+      "image": "/images/news4.jpg",
       "text": "Торговое или промышленное предприятие."
     }
   ],
   "brands": [
-    { "id": 1, "name": "Truper", "logo": "/images/brand-truper.png" },
-    { "id": 2, "name": "Центр инструмент", "logo": "/images/brand-centr.png" },
-    { "id": 3, "name": "Finland", "logo": "/images/brand-finland.png" },
-    { "id": 4, "name": "Kapro", "logo": "/images/brand-kapro.png" },
-    { "id": 5, "name": "Truper 2", "logo": "/images/brand-truper2.png" },
-    { "id": 6, "name": "Центр 2", "logo": "/images/brand-centr2.png" }
+    {
+      "id": 1,
+      "name": "Truper",
+      "logo": "/src/assets/images/truper.png"
+    },
+    {
+      "id": 2,
+      "name": "Центро инструмент",
+      "logo": "/src/assets/images/centro-inst.png"
+    },
+    {
+      "id": 3,
+      "name": "Finland",
+      "logo": "/src/assets/images/finland.png"
+    },
+    {
+      "id": 4,
+      "name": "Kapro",
+      "logo": "/src/assets/images/kapro.png"
+    },
+    {
+      "id": 5,
+      "name": "Truper",
+      "logo": "/src/assets/images/truper.png"
+    },
+    {
+      "id": 6,
+      "name": "Центро инструмент",
+      "logo": "/src/assets/images/centro-inst.png"
+    }
   ]
 }

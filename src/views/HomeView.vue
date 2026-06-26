@@ -2,44 +2,57 @@
   <div class="home">
     <!-- HERO BANNER -->
     <section class="hero">
-      <div class="container hero__inner">
-        <!-- Main slide -->
+      <div class="hero__grid">
+
+        <!-- Главный слайд -->
         <div class="hero__main">
+          <img src="@/assets/images/dewalt.png" alt="DeWALT" class="hero__bg-img" />
+          <div class="hero__overlay"></div>
           <div class="hero__main-content">
             <h1 class="hero__title">DeWALT — Инструмент<br/>с настоящим характером</h1>
-            <RouterLink to="/catalog" class="btn btn--primary hero__btn">Перейти к каталогу</RouterLink>
+            <RouterLink to="/catalog" class="btn btn--primary hero__btn">Перейти в каталог</RouterLink>
           </div>
-          <div class="hero__main-img img-placeholder">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
-          <button class="hero__arrow hero__arrow--next" @click="nextSlide">
+          <button class="hero__arrow">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
 
-        <!-- Side panels -->
-        <div class="hero__side">
-          <div class="hero__side-card">
-            <div class="hero__side-img img-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-            </div>
-            <div class="hero__side-content">
-              <span class="hero__side-label">Акции</span>
-              <button class="hero__side-arrow">
+        <!-- Средняя колонка: Акции -->
+        <div class="hero__col">
+          <img src="@/assets/images/akcii.png" alt="Акции" class="hero__bg-img" />
+          <div class="hero__overlay"></div>
+          <div class="hero__col-bottom">
+            <button class="hero__arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <span class="hero__col-label">Акции</span>
+          </div>
+        </div>
+
+        <!-- Правая колонка: 2 карточки -->
+        <div class="hero__right">
+          <div class="hero__right-card">
+            <img src="@/assets/images/new-postyplenia.png" alt="Новое поступление" class="hero__bg-img" />
+            <div class="hero__overlay"></div>
+            <div class="hero__right-content hero__right-content--top">
+              <span class="hero__right-label">Новое поступление</span>
+              <button class="hero__arrow hero__arrow--sm">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
               </button>
             </div>
           </div>
-          <div class="hero__side-card">
-            <div class="hero__side-img img-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-            </div>
-            <div class="hero__side-content">
-              <span class="hero__side-label">Новое поступление</span>
-              <RouterLink to="/news" class="hero__side-link">Акции на складе →</RouterLink>
+          <div class="hero__right-card">
+            <img src="@/assets/images/akcii-sverla.png" alt="Акции на сверла" class="hero__bg-img" />
+            <div class="hero__overlay"></div>
+            <div class="hero__right-content">
+              <span class="hero__right-label">Акции на сверла</span>
+              <button class="hero__arrow hero__arrow--sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -59,18 +72,21 @@
 
     <!-- BRANDS -->
     <section class="brands">
-      <div class="container brands__inner">
-        <button class="brands__nav-btn" @click="scrollBrands(-1)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <div class="brands__track" ref="brandsRef">
-          <div v-for="brand in data.brands" :key="brand.id" class="brands__item">
-            <div class="brands__logo img-placeholder">{{ brand.name }}</div>
+      <div class="container">
+        <h2 class="brands__title">Наши бренды</h2>
+        <div class="brands__inner">
+          <div class="brands__track" ref="brandsRef">
+            <button class="brands__nav-btn" @click="scrollBrands(-1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div v-for="brand in data.brands" :key="brand.id" class="brands__item">
+              <img :src="brand.logo" :alt="brand.name" class="brands__logo-img" />
+            </div>
+            <button class="brands__nav-btn" @click="scrollBrands(1)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
           </div>
         </div>
-        <button class="brands__nav-btn" @click="scrollBrands(1)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
       </div>
     </section>
 
@@ -110,17 +126,11 @@
           >{{ tab }}</button>
         </div>
         <div class="news-section__slider-wrap">
-          <button class="news-section__nav-btn" @click="scrollNews(-1)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
           <div class="news-section__slider" ref="newsRef">
             <div v-for="p in featuredProducts" :key="p.id" class="news-section__slide">
               <ProductCard :product="p" />
             </div>
           </div>
-          <button class="news-section__nav-btn" @click="scrollNews(1)">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
         </div>
         <div class="news-section__dots">
           <span v-for="n in 8" :key="n" class="news-section__dot" :class="{ 'news-section__dot--active': n === 1 }"></span>
@@ -195,25 +205,48 @@ const featuredProducts = computed(() => data.products.slice(0, 8))
 
 <style scoped>
 /* HERO */
-.hero { background: var(--color-darker); padding: 0; }
-.hero__inner {
+.hero { padding: 0; }
+
+.hero__grid {
   display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 0;
-  min-height: 300px;
+  grid-template-columns: 1fr 320px 320px;
+  height: 340px;
 }
+
+/* Общий фон-картинка */
+.hero__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Затемняющий оверлей */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* --- Главный слайд --- */
 .hero__main {
   position: relative;
-  padding: 40px 40px 40px 0;
+  overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px;
+  border-right: 1px solid rgba(255,255,255,0.1);
 }
 .hero__main-content {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+  margin-top: 8px;
 }
 .hero__title {
   font-family: var(--font-heading);
@@ -221,72 +254,107 @@ const featuredProducts = computed(() => data.products.slice(0, 8))
   line-height: var(--lh-h1);
   color: var(--color-white);
 }
-.hero__main-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
+.hero__btn {
+  align-self: flex-start;
+  padding: 12px 28px;
+  font-size: var(--fs-mini);
 }
+
+/* Стрелка — внизу по центру */
 .hero__arrow {
   position: absolute;
-  bottom: 24px;
-  right: 24px;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
   width: 36px;
   height: 36px;
   background: var(--color-primary);
   border-radius: 2px;
+  border: none;
   color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 2;
+  flex-shrink: 0;
+  transition: background 0.2s;
 }
-.hero__side {
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid rgba(255,255,255,0.1);
+.hero__arrow:hover { background: var(--color-black); }
+
+.hero__arrow--sm {
+  position: static;
+  transform: none;
+  width: 28px;
+  height: 28px;
 }
-.hero__side-card {
-  flex: 1;
+
+/* --- Средняя колонка --- */
+.hero__col {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-right: 1px solid rgba(255,255,255,0.1);
 }
-.hero__side-img {
-  width: 100%;
-  height: 100%;
-  min-height: 130px;
-}
-.hero__side-content {
+/* Стрелка + лейбл внизу по центру */
+.hero__col-bottom {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  bottom: 16px;
+  left: 0;
+  right: 0;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
-.hero__side-label {
+.hero__col-label {
   font-family: var(--font-heading);
   font-size: var(--fs-sub-m);
   color: var(--color-white);
 }
-.hero__side-arrow {
-  width: 28px;
-  height: 28px;
-  background: var(--color-primary);
-  border-radius: 2px;
-  color: var(--color-white);
+
+/* --- Правая колонка --- */
+.hero__right {
+  display: flex;
+  flex-direction: column;
+}
+.hero__right-card {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.hero__right-card + .hero__right-card {
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Верхняя карточка: лейбл + стрелка сверху */
+.hero__right-content--top {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  right: 14px;
+  z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-.hero__side-link {
-  font-size: var(--fs-shape);
-  color: var(--color-primary);
+
+/* Нижняя карточка: лейбл + стрелка снизу */
+.hero__right-content {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  right: 14px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__right-label {
+  font-family: var(--font-heading);
+  font-size: var(--fs-sub-m);
+  color: var(--color-white);
 }
 
 /* PRODUCTS GRID */
@@ -294,52 +362,65 @@ const featuredProducts = computed(() => data.products.slice(0, 8))
 .home__products-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px 60px;
+  gap: 50px 20px;
 }
 
 /* BRANDS */
 .brands {
-  background: var(--color-white);
-  padding: 32px 0;
-  border-top: 1px solid var(--color-light);
-  border-bottom: 1px solid var(--color-light);
+  background: var(--color-darker);
+  padding: 40px 0;
+}
+.brands__title {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  line-height: var(--lh-h2);
+  color: var(--color-white);
+  margin-bottom: 24px;
 }
 .brands__inner {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 .brands__nav-btn {
   width: 36px;
   height: 36px;
-  border: 1px solid var(--color-light);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 50%;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-dark);
+  color: var(--color-white);
   flex-shrink: 0;
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s;
 }
 .brands__nav-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
 .brands__track {
+  justify-content: space-between;
   display: flex;
-  gap: 24px;
+  gap: 16px;
   overflow-x: auto;
   flex: 1;
   scrollbar-width: none;
 }
 .brands__track::-webkit-scrollbar { display: none; }
-.brands__item { flex-shrink: 0; }
-.brands__logo {
-  width: 140px;
-  height: 56px;
-  font-family: var(--font-heading);
-  font-size: var(--fs-shape);
-  color: var(--color-gray);
-  border: 1px solid var(--color-light);
-  border-radius: 2px;
+.brands__item {
+  flex-shrink: 0;
+  background: var(--color-white);
+  border-radius: 4px;
+  width: 160px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+}
+.brands__logo-img {
+  max-width: 100%;
+  max-height: 48px;
+  object-fit: contain;
 }
 
 /* ABOUT */
